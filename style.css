@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: #1C1A1B;
+}
+
+
+h2 {
+    color: lawngreen;
+    font-size: 60px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+
+img {
+    width: 100%;
+    display: block;
+    transition: .3s;
+}
+
+img:hover {
+    border-radius: 10px;
+}
+
+.gallery {  
+    margin: 50px auto;
+    width: 80%;
+    list-style: none;
+    padding: 5px;
+    border: 10px solid lawngreen;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5), -1px -1px 10px rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+
+.gallery:hover {
+    background-color: lawngreen;
+}
+
+button {
+    background-color: lawngreen;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+
+button:hover {
+    background-color:  rgba(0, 252, 84, 0.863);
+}
+
+
+/* layar */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    transition: .3s;
+    margin: 50px auto;
+}
+
+.overlay:target {
+    width: 550px;
+    height: 550px;
+    left: 0;
+    right: 0;
+}
+
+.overlay:target img {
+    animation: zoomDanFade .5s ease-in-out;
+}
+
+
+.overlay .close {
+    position: relative;
+    right: -240px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    padding: 3px;
+}
+
+footer {
+    color: white;
+    height: 20px;
+    font-weight: bold;
+}
+
+/* Animasi */
+
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* 
+#FFBA00
+#425C5A
+#A2BFBD
+#A6D3F2
+#AFC3AB
+#ACBDAA
+#2D2942
+#F83A26
+#FFC344
+#FFC3A2 
+#F7D78C
+#FF5844 
+#1C1A1B    */
