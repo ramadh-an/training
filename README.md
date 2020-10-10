@@ -1,4 +1,5 @@
-# training
- Project recap
+# Training
+
+## Project recap
 
 -WEB STATIS GALLERY
